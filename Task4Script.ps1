@@ -87,10 +87,10 @@ $domainUserPwdPlainText = "Admin123."
 #########################
 
 if ($All) {
-    # $NetworkConfig = $true
-    # $DomainConfig = $true
-    # $ComputerConfig = $true
-    # $ScriptResourceConfig = $true
+    $NetworkConfig = $true
+    $DomainConfig = $true
+    $ComputerConfig = $true
+    $ScriptResourceConfig = $true
     $LCMConfig = $true
 }
 

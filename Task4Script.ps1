@@ -58,9 +58,9 @@ Switch parameter to enable all the configurations.
 #>
 
 param
-(    
-	[string]$NodeName = $ENV:computername,
-	[string]$MachineName = $ENV:computername,
+(
+    [string]$NodeName = $ENV:computername,
+    [string]$MachineName = $ENV:computername,
     [switch]$InstallModules,
     [switch]$NetworkConfig,
     [switch]$DomainConfig,
@@ -75,9 +75,9 @@ param
 ############################
 
 $InterfaceAlias = "Ethernet"
-$IPAddress = "192.168.100.70"
+$IPAddress = "192.168.100.35"
 $DefaultGateway = "192.168.100.1"
-$DnsServerAddress = "192.168.100.67"
+$DnsServerAddress = "192.168.100.33"
 $Domain= "taskfourtest.com"
 $domainUser = "TASKFOURTEST\Administrador"
 $domainUserPwdPlainText = "Admin123."
@@ -103,7 +103,8 @@ if ($InstallModules) {
                     'xPSDesiredStateConfiguration',
                     'xRemoteDesktopAdmin',
                     'xSystemSecurity',
-                    'PolicyFileEditor')
+                    'PolicyFileEditor',
+                    'Pester')
 
     # Install-NuGetProvider
     Install-PackageProvider -Name Nuget
